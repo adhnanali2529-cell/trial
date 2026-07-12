@@ -68,10 +68,10 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800">
+    <div className="glass-card rounded-3xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
         <h3 className="font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2">
-          <Clock className="text-indigo-500 animate-pulse" size={18} /> Log Study Session
+          <Clock className="text-sage-500 animate-pulse" size={18} /> Log Study Session
         </h3>
         <button
           onClick={onClose}
@@ -97,7 +97,7 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
           <select
             value={subjectId}
             onChange={(e) => setSubjectId(e.target.value)}
-            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
+            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm"
             required
             id="session-subject-select"
           >
@@ -119,7 +119,7 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
               min="1"
               value={durationStr}
               onChange={(e) => setDurationStr(e.target.value)}
-              className="w-32 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
+              className="w-32 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm"
               required
               id="session-duration-input"
             />
@@ -153,7 +153,7 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
+              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm"
               required
               id="session-date-input"
             />
@@ -170,7 +170,7 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
             onChange={(e) => setNote(e.target.value)}
             placeholder="What topics did you study? (e.g., reviewed dynamic programming, practiced spelling)"
             rows={3}
-            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm resize-none"
+            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm resize-none"
             id="session-note-input"
           />
         </div>
@@ -186,7 +186,7 @@ export const LogSessionForm: React.FC<LogSessionFormProps> = ({
           </button>
           <button
             type="submit"
-            className="flex-1 py-2 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-colors shadow-xs hover:shadow-md flex items-center justify-center gap-1.5"
+            className="flex-1 py-2 px-4 rounded-xl bg-sage-500 hover:bg-sage-600 text-white font-medium text-sm transition-colors shadow-xs hover:shadow-md flex items-center justify-center gap-1.5"
             id="submit-log-session-btn"
           >
             <CheckCircle size={16} /> Log Session

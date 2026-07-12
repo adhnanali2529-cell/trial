@@ -137,19 +137,19 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50/60 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 pb-12">
+    <div className="min-h-screen bg-[#F8FAF9] dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 pb-12">
       {/* Upper Navigation Bar */}
-      <header className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-xs">
+      <header className="sticky top-0 z-40 bg-[#F8FAF9]/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-sage-200/50 dark:border-sage-800/30 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="p-2.5 bg-indigo-600 text-white rounded-xl shadow-xs flex items-center justify-center">
-              <Award size={22} className="animate-pulse" />
+            <div className="p-2.5 bg-sage-500 text-white rounded-2xl shadow-xs flex items-center justify-center">
+              <Award size={22} />
             </div>
             <div>
-              <h1 className="font-bold text-slate-900 dark:text-white text-lg tracking-tight">
+              <h1 className="font-extrabold text-slate-900 dark:text-white text-lg tracking-tight">
                 Academic Study Tracker
               </h1>
-              <p className="text-[10px] text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase">
+              <p className="text-[10px] text-sage-600 dark:text-sage-400 font-bold tracking-wider uppercase">
                 University Portal
               </p>
             </div>
@@ -182,13 +182,13 @@ export default function App() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
         {/* Banner with Greeting & Streak Announcement */}
-        <div className="bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 rounded-3xl p-6 md:p-8 text-white relative overflow-hidden shadow-lg">
+        <div className="bg-gradient-to-br from-[#2D3A31] to-[#16201A] rounded-3xl p-6 md:p-8 text-white relative overflow-hidden shadow-md border border-white/5">
           <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
             <Sparkles size={160} />
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-medium text-indigo-200 border border-white/5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-medium text-sage-200 border border-white/5">
               <Calendar size={13} />
               <span>Week of {currentWeekMondayStr} — Today: {todayStr}</span>
             </div>
@@ -196,7 +196,7 @@ export default function App() {
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
               Keep building momentum, Adhnan!
             </h2>
-            <p className="text-indigo-200/90 text-sm leading-relaxed max-w-2xl">
+            <p className="text-sage-100/90 text-sm leading-relaxed max-w-2xl">
               {getMotivationalMessage()}
             </p>
 
@@ -206,10 +206,10 @@ export default function App() {
                   setShowLogSession(true);
                   setShowAddSubject(false);
                 }}
-                className="px-5 py-2.5 rounded-xl bg-white text-indigo-950 hover:bg-indigo-50 font-semibold text-sm transition-all shadow-md hover:scale-[1.02] cursor-pointer flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-white text-sage-950 hover:bg-sage-50 font-semibold text-sm transition-all shadow-md hover:scale-[1.02] cursor-pointer flex items-center gap-2"
                 id="header-log-session-btn"
               >
-                <PlusCircle size={16} className="text-indigo-600" />
+                <PlusCircle size={16} className="text-sage-600" />
                 Log Study Session
               </button>
 
@@ -218,7 +218,7 @@ export default function App() {
                   setShowAddSubject(true);
                   setShowLogSession(false);
                 }}
-                className="px-5 py-2.5 rounded-xl bg-indigo-600/55 hover:bg-indigo-600/80 text-white font-semibold text-sm transition-all border border-indigo-400/20 cursor-pointer flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-sage-500/20 hover:bg-sage-500/40 text-white font-semibold text-sm transition-all border border-sage-500/30 cursor-pointer flex items-center gap-2"
                 id="header-add-subject-btn"
               >
                 <BookOpen size={16} />
@@ -231,12 +231,12 @@ export default function App() {
         {/* Dashboard Grid (Analytics cards at top) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Total Study Hours */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden">
+          <div className="glass-card rounded-3xl p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-slate-450 dark:text-slate-500 uppercase tracking-wider">
                 Total Hours Studied
               </span>
-              <div className="p-2 bg-indigo-50 dark:bg-indigo-950/20 text-indigo-600 dark:text-indigo-400 rounded-lg">
+              <div className="p-2.5 bg-sage-50 dark:bg-sage-950/20 text-sage-600 dark:text-sage-400 rounded-xl">
                 <Clock size={18} />
               </div>
             </div>
@@ -246,37 +246,37 @@ export default function App() {
                 <span className="text-4xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">
                   {totalHoursThisWeek}h
                 </span>
-                <span className="text-slate-400 dark:text-slate-500 text-sm">this week</span>
+                <span className="text-slate-400 dark:text-slate-500 text-sm font-medium">this week</span>
               </div>
 
               {/* Progress bar versus the dynamic target sum of all subjects */}
               <div className="mt-4">
                 <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400 mb-1">
-                  <span>Weekly Goal ({weeklyTargetSum}h)</span>
-                  <span className="font-semibold">{overallProgressPercent}%</span>
+                  <span className="font-medium">Weekly Goal ({weeklyTargetSum}h)</span>
+                  <span className="font-semibold text-sage-600 dark:text-sage-450">{overallProgressPercent}%</span>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2.5 overflow-hidden">
+                <div className="w-full bg-sage-100 dark:bg-slate-800 rounded-full h-2.5 overflow-hidden">
                   <div
-                    className="bg-indigo-600 h-full rounded-full transition-all duration-500"
+                    className="bg-sage-500 h-full rounded-full transition-all duration-500"
                     style={{ width: `${overallProgressPercent}%` }}
                   />
                 </div>
               </div>
             </div>
 
-            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1">
-              <TrendingUp size={12} className="text-emerald-500" />
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1 font-medium">
+              <TrendingUp size={12} className="text-sage-500" />
               <span>Aiming for {weeklyTargetSum} total hours across {subjects.length} subjects</span>
             </div>
           </div>
 
           {/* Card 2: Current Streak */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden">
+          <div className="glass-card rounded-3xl p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-slate-450 dark:text-slate-500 uppercase tracking-wider">
                 Current Streak
               </span>
-              <div className="p-2 bg-orange-50 dark:bg-orange-950/20 text-orange-600 dark:text-orange-400 rounded-lg">
+              <div className="p-2.5 bg-orange-50 dark:bg-orange-950/20 text-orange-600 dark:text-orange-400 rounded-xl">
                 <Flame size={18} className={activeStreak > 0 ? "animate-bounce" : ""} />
               </div>
             </div>
@@ -311,7 +311,7 @@ export default function App() {
                         className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold transition-all ${
                           hasSession
                             ? "bg-orange-500 text-white shadow-xs scale-105"
-                            : "bg-slate-100 dark:bg-slate-800 text-slate-450"
+                            : "bg-sage-100/70 dark:bg-slate-800 text-slate-400"
                         }`}
                         title={formattedCheck}
                       >
@@ -323,19 +323,19 @@ export default function App() {
               </div>
             </div>
 
-            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1">
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1 font-medium">
               <Trophy size={12} className="text-amber-500 shrink-0" />
               <span>Consecutive days with logged sessions. Keep it up!</span>
             </div>
           </div>
 
           {/* Card 3: Quick Overview */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden">
+          <div className="glass-card rounded-3xl p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-slate-450 dark:text-slate-500 uppercase tracking-wider">
                 Total Logs
               </span>
-              <div className="p-2 bg-teal-50 dark:bg-teal-950/20 text-teal-600 dark:text-teal-400 rounded-lg">
+              <div className="p-2.5 bg-sage-50 dark:bg-sage-950/20 text-sage-600 dark:text-sage-400 rounded-xl">
                 <BookOpen size={18} />
               </div>
             </div>
@@ -345,13 +345,13 @@ export default function App() {
                 <span className="text-4xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">
                   {sessions.length}
                 </span>
-                <span className="text-slate-400 dark:text-slate-500 text-sm">sessions</span>
+                <span className="text-slate-400 dark:text-slate-500 text-sm font-medium">sessions</span>
               </div>
 
               <div className="mt-4 flex gap-2">
-                <div className="flex-1 bg-slate-50 dark:bg-slate-950 rounded-xl p-2 border border-slate-100 dark:border-slate-850">
-                  <p className="text-[10px] text-slate-400 dark:text-slate-500">Average Duration</p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                <div className="flex-1 bg-sage-50/50 dark:bg-sage-950/10 rounded-2xl p-2.5 border border-sage-100/50 dark:border-slate-800/40">
+                  <p className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Average Duration</p>
+                  <p className="text-sm font-bold text-slate-850 dark:text-slate-200">
                     {sessions.length
                       ? Math.round(
                           sessions.reduce((sum, s) => sum + s.durationMinutes, 0) / sessions.length
@@ -360,17 +360,17 @@ export default function App() {
                     m
                   </p>
                 </div>
-                <div className="flex-1 bg-slate-50 dark:bg-slate-950 rounded-xl p-2 border border-slate-100 dark:border-slate-850">
-                  <p className="text-[10px] text-slate-400 dark:text-slate-500">Subject Count</p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                <div className="flex-1 bg-sage-50/50 dark:bg-sage-950/10 rounded-2xl p-2.5 border border-sage-100/50 dark:border-slate-800/40">
+                  <p className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Subject Count</p>
+                  <p className="text-sm font-bold text-slate-850 dark:text-slate-200">
                     {subjects.length} Active
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1">
-              <Sparkles size={12} className="text-indigo-500" />
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1 font-medium">
+              <Sparkles size={12} className="text-sage-500" />
               <span>Refining discipline one logged session at a time</span>
             </div>
           </div>

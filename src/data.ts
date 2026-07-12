@@ -46,7 +46,7 @@ export const DEFAULT_SUBJECTS: Subject[] = [
     id: "sub-2",
     name: "Data Structures & Algorithms",
     targetHours: 10,
-    color: "emerald",
+    color: "sage",
   },
   {
     id: "sub-3",
@@ -199,6 +199,13 @@ export const COLOR_MAP: Record<string, { bg: string; text: string; border: strin
     bar: "bg-fuchsia-500",
     ring: "focus:ring-fuchsia-500",
   },
+  sage: {
+    bg: "bg-sage-50 dark:bg-sage-950/20",
+    text: "text-sage-600 dark:text-sage-400",
+    border: "border-sage-200 dark:border-sage-800/50",
+    bar: "bg-sage-500",
+    ring: "focus:ring-sage-500",
+  },
 };
 
-export const AVAILABLE_COLORS = ["amber", "emerald", "violet", "sky", "rose", "indigo", "teal", "fuchsia"];
+export const AVAILABLE_COLORS = ["sage", "amber", "emerald", "violet", "sky", "rose", "indigo", "teal", "fuchsia"];

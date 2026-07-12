@@ -60,11 +60,11 @@ export const SessionList: React.FC<SessionListProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800">
+    <div className="glass-card rounded-3xl p-6 shadow-sm">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
           <h3 className="font-semibold text-slate-800 dark:text-slate-200 text-lg flex items-center gap-2">
-            <Notebook className="text-indigo-500" size={20} /> Study Log History
+            <Notebook className="text-sage-500" size={20} /> Study Log History
           </h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">Review your past study sessions and notes</p>
         </div>
@@ -82,7 +82,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="pl-9 pr-3.5 py-1.5 w-full sm:w-56 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-xs focus:outline-hidden focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all"
+              className="pl-9 pr-3.5 py-1.5 w-full sm:w-56 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-xs focus:outline-hidden focus:ring-2 focus:ring-sage-500/15 focus:border-sage-500 transition-all"
               id="session-search-input"
             />
           </div>
@@ -96,7 +96,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                 setFilterSubjectId(e.target.value);
                 setCurrentPage(1);
               }}
-              className="pl-8 pr-3.5 py-1.5 w-full sm:w-48 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-xs focus:outline-hidden focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+              className="pl-8 pr-3.5 py-1.5 w-full sm:w-48 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-xs focus:outline-hidden focus:ring-2 focus:ring-sage-500/15 focus:border-sage-500 transition-all appearance-none cursor-pointer"
               id="session-subject-filter"
             >
               <option value="">All Subjects</option>
@@ -240,7 +240,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                   onClick={() => handlePageChange(p)}
                   className={`w-8 h-8 rounded-lg text-xs font-semibold cursor-pointer transition-all ${
                     currentPage === p
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-sage-500 text-white"
                       : "border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
                   }`}
                   id={`page-btn-${p}`}

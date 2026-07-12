@@ -19,7 +19,7 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
 }) => {
   const [name, setName] = useState("");
   const [targetHours, setTargetHours] = useState<number>(4);
-  const [color, setColor] = useState("indigo");
+  const [color, setColor] = useState("sage");
   const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -50,15 +50,15 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
     // Reset
     setName("");
     setTargetHours(4);
-    setColor("indigo");
+    setColor("sage");
     onClose();
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xs border border-slate-100 dark:border-slate-800">
+    <div className="glass-card rounded-3xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
         <h3 className="font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2">
-          <BookOpen className="text-indigo-500" size={18} /> Add New Subject
+          <BookOpen className="text-sage-500" size={18} /> Add New Subject
         </h3>
         <button
           onClick={onClose}
@@ -86,7 +86,7 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="e.g. Organic Chemistry, Algorithms"
-            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
+            className="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm"
             required
             id="subject-name-input"
           />
@@ -104,7 +104,7 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
               step="0.5"
               value={targetHours || ""}
               onChange={(e) => setTargetHours(parseFloat(e.target.value) || 0)}
-              className="w-32 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
+              className="w-32 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 focus:outline-hidden focus:ring-2 focus:ring-sage-500/20 focus:border-sage-500 transition-all text-sm"
               required
               id="subject-target-input"
             />
@@ -127,7 +127,7 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
                   onClick={() => setColor(col)}
                   className={`w-7 h-7 rounded-full cursor-pointer flex items-center justify-center transition-all ${colors.bar} hover:scale-110 ${
                     isSelected
-                      ? "ring-4 ring-offset-2 ring-indigo-500 dark:ring-offset-slate-950"
+                      ? "ring-4 ring-offset-2 ring-sage-550 dark:ring-offset-slate-950"
                       : "opacity-80"
                   }`}
                   title={col}
@@ -149,7 +149,7 @@ export const AddSubjectForm: React.FC<AddSubjectFormProps> = ({
           </button>
           <button
             type="submit"
-            className="flex-1 py-2 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-colors shadow-xs hover:shadow-md flex items-center justify-center gap-1.5"
+            className="flex-1 py-2 px-4 rounded-xl bg-sage-500 hover:bg-sage-600 text-white font-medium text-sm transition-colors shadow-xs hover:shadow-md flex items-center justify-center gap-1.5"
             id="submit-add-subject-btn"
           >
             <Plus size={16} /> Save Subject
